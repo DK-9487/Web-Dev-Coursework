@@ -1,0 +1,303 @@
+        .featuredText {
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 12rem;
+        }
+
+        .cardImg {
+                position: absolute;
+                top: 0;
+                right: 0; 
+                bottom: 0;
+                width: 50%;
+                background: url(../Image/su-san-lee-E_eWwM29wfU-unsplash.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                mask-image: linear-gradient(to right, transparent, #000 70%);
+            }
+
+        
+        .featuredCardArea {
+            flex: 2 1 22rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            align-content: start;
+            padding-left: 20px;
+            border-left: 3px solid rgb(116, 116, 116);
+
+            .card {
+                position: relative;
+                overflow: hidden;
+                min-height: 11rem;
+                background-color: aliceblue;
+                color: #222;
+                border-radius: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    border: 2px solid #f5e11a; 
+                }
+
+                h1{
+                position: relative;
+                padding: 1rem;
+                padding-bottom: 3px;
+                font-size: 1.5rem;
+                text-wrap: normal;
+                width: 50%;
+                }
+
+                small {
+                    position: relative;
+                    padding: 1rem;
+                    padding-top: 0px;
+                    font-size: 1rem;
+                    text-wrap: normal;
+                    font-weight: bold;
+                    color: gray;
+                    width: 50%;
+                    
+                }
+            }
+
+            .cardBig {
+                grid-column: 1 / -1;
+                min-height: 16rem;
+                border: 2px solid #f5e11a;
+                box-shadow: 0 0 18px rgba(245, 225, 26, .35);
+            }
+
+            
+        }
+
+        .CardArea {
+            flex: 2 1 22rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            align-content: start;
+            padding: 40px;
+            padding-bottom: 30px;
+            padding-top: 20px;
+            /* border-left: 3px solid rgb(116, 116, 116);  */
+            margin-bottom: 30px;
+
+            .card  {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+                min-height: 10rem;
+                background-color: aliceblue;
+                color: #222;
+                border-radius: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    border: 2px solid #f5e11a; 
+                }
+
+                h1{
+                    margin-bottom: auto;
+                    position: relative;
+                    padding: 1rem;
+                    padding-bottom: 3px;
+                    font-size: 1.6rem;
+                    text-wrap: normal;
+                    width: 50%;
+                }
+
+                small {
+                    
+                    position: relative;
+                    padding: 1rem;
+                    padding-top: 0px;
+                    font-size: 0.9rem;
+                    text-wrap: normal;
+                    font-weight: bold;
+                    color: gray;
+                    width: 50%;
+                    
+                }
+            }
+
+            .cardBig {
+
+                grid-column: 1 / 1;
+                min-height: 11rem;
+                border: 2px solid #f5e11a;
+                box-shadow: 0 0 18px rgba(245, 225, 26, .35);
+
+            }
+
+            .tag {
+                grid-column: 1 / -1;
+            }
+        }
+
+        .CardAreaBottom {
+
+            flex: 2 1 22rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+            align-content: start;
+            
+            padding: 40px;
+            padding-bottom: 30px;
+            padding-top: 20px;
+            /* border-left: 3px solid rgb(116, 116, 116);  */
+            margin-bottom: 30px;
+            
+
+            .card  {
+
+                position: relative;
+                overflow: hidden;
+                max-height: 100px;
+                background-color: aliceblue;
+                color: #222;
+                border-radius: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    border: 2px solid #f5e11a; 
+                }
+
+                h1{
+                position: relative;
+                padding: 1rem;
+                padding-bottom: 3px;
+                font-size: 1.2rem;
+                text-wrap: normal;
+                width: 100%;
+                }
+
+                small {
+                    position: relative;
+                    padding: 1rem;
+                    padding-top: 0px;
+                    font-size: 1rem;
+                    text-wrap: normal;
+                    font-weight: bold;
+                    color: gray;
+                    width: 50%;
+                    
+                }
+            }
+
+            .cardBig {
+                
+                grid-column: 1 / -1;
+                min-height: 11rem;
+                border: 2px solid #f5e11a;
+                box-shadow: 0 0 18px rgba(245, 225, 26, .35);
+
+            }
+
+            .tag {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+        
+
+        .toptext {
+            white-space: nowrap;
+        }
+
+        .tag{
+            width: fit-content;
+            display:inline-block;
+            background:yellow;
+            color:black;
+            font-weight:700;
+            padding:4px 25px 4px 12px;
+            margin-bottom: 10px;
+            clip-path:polygon(0 0,100% 0,90% 100%,0 100%);
+            white-space: nowrap;
+            /* mask-image: linear-gradient(to left, transparent, #faf9f9 100%); */
+        }
+
+        @media (max-width: 70rem) {
+            .featuredCardArea { 
+                grid-template-columns: repeat(1, minmax(0, 1fr)); 
+                border-left: 0px;
+                padding-left: 0px;
+            }
+
+            .CardArea { 
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                padding: 15px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+            }
+
+            .CardAreaBottom { 
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                padding: 15px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+            }
+
+            .featuredText {
+                h1 {
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+
+        }
+
+        body {
+            background-color: rgb(34, 34, 34);
+            background-image: url(../Image/su-san-lee-E_eWwM29wfU-unsplash.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+        }
+
+        .content {
+            height: auto;
+            padding: 2.5rem;
+            padding-left: 7rem;
+            transition: .3s;
+        }
+
+        .content2 {
+            padding-left: 4.5rem;
+            background-color: rgb(27, 27, 27);
+            border-top: 2px solid rgb(27, 27, 27);
+            height: auto;
+            transition: .3s;
+        }
+
+        .contentArea{
+            margin-bottom: 0px;
+            background-color: rgb(34, 34, 34);
+            border-radius: 15px;
+            box-shadow: 0 0 1000px rgb(34, 34, 34);
+            padding: 10px;
+            padding-bottom: 1.5rem;
+        }
+
+        .Top {
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 15px;
+        }
+
+        .bottom {
+            padding: 1.5rem;
+        }
+
+        a {
+            text-decoration: none;
+        }

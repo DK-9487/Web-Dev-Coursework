@@ -1,0 +1,382 @@
+        .featuredCardArea {
+            flex: 2 1 22rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            align-content: start;
+            padding-left: 20px;
+            border-left: 3px solid rgb(116, 116, 116);
+        }
+
+        .CardArea {
+            flex: 2 1 22rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            align-content: start;
+            padding: 40px;
+            padding-bottom: 30px;
+            padding-top: 20px;
+            /* border-left: 3px solid rgb(116, 116, 116);  */
+            margin-bottom: 30px;
+
+            .card  {
+
+                position: relative;
+                overflow: hidden;
+                min-height: 8rem;
+                background-color: aliceblue;
+                color: #222;
+                border-radius: 8px;
+                text-decoration: none;
+
+                &:hover {
+                    border: 2px solid #f5e11a; 
+                }
+
+                h1{
+                position: relative;
+                padding: 1rem;
+                padding-bottom: 3px;
+                font-size: 1.5rem;
+                text-wrap: normal;
+                width: 50%;
+                }
+
+                small {
+                    position: relative;
+                    padding: 1rem;
+                    padding-top: 0px;
+                    font-size: 1rem;
+                    text-wrap: normal;
+                    font-weight: bold;
+                    color: gray;
+                    width: 50%;
+                    
+                }
+            }
+
+            .cardBig {
+
+                grid-column: 1 / -1;
+                min-height: 12rem;
+                border: 2px solid #f5e11a;
+                box-shadow: 0 0 18px rgba(245, 225, 26, .35);
+
+            }
+        }
+
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            min-height: 11rem;
+            background-color: aliceblue;
+            color: #222;
+            border-radius: 8px;
+            text-decoration: none;
+
+            &:hover {
+                border: 2px solid #f5e11a; 
+            }
+
+            h1{
+            position: relative;
+            padding: 1rem;
+            padding-bottom: 3px;
+            font-size: 1.5rem;
+            text-wrap: normal;
+            width: 50%;
+            }
+
+            small {
+                position: relative;
+                padding: 1rem;
+                padding-top: 0px;
+                font-size: 1rem;
+                text-wrap: normal;
+                font-weight: bold;
+                color: gray;
+                width: 50%;
+                
+            }
+        }
+
+        .cardBig {
+            grid-column: 1 / -1;
+            min-height: 16rem;
+            border: 2px solid #f5e11a;
+            box-shadow: 0 0 18px rgba(245, 225, 26, .35);
+        }
+
+        .cardImg {
+            position: absolute;
+            top: 0;
+            right: 0; 
+            bottom: 0;
+            width: 50%;
+            background: url(../Image/su-san-lee-E_eWwM29wfU-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            mask-image: linear-gradient(to right, transparent, #000 70%);
+        }
+
+        .toptext {
+            white-space: nowrap;
+        }
+
+        .tag{
+            grid-column: 1 / -1;
+            width: fit-content;
+            display:inline-block;
+            background:yellow;
+            color:black;
+            font-weight:700;
+            padding:4px 25px 4px 12px;
+            margin-bottom: 10px;
+            clip-path:polygon(0 0,100% 0,90% 100%,0 100%);
+            white-space: nowrap;
+            /* mask-image: linear-gradient(to left, transparent, #faf9f9 100%); */
+        }
+
+        @media (max-width: 60rem) {
+            .featuredCardArea { 
+                grid-template-columns: 1fr; 
+                border-left: 0px;
+                padding-left: 0px;
+            }
+
+            .CardArea { 
+                grid-template-columns: 1fr; 
+            }
+
+            .featuredText {
+                h1 {
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+
+            .contentTopText {
+                text-align: center;
+                    justify-content: center;
+            }
+
+            .animePilContent {
+
+                flex: 2 1 22rem;
+                display: grid;
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+                gap: 15px;
+                align-content:center;
+                padding: 40px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+                /* border-left: 3px solid rgb(116, 116, 116);  */
+                margin-bottom: 30px;
+
+                .card {
+                    position: relative;
+                    overflow: hidden;
+                    min-height: 11rem;
+                    background-color: aliceblue;
+                    color: #222;
+                    border-radius: 8px;
+                    text-decoration: none;
+
+                    &:hover {
+                        border: 2px solid #f5e11a; 
+                    }
+
+                    h1{
+                        position: relative;
+                        padding: 1rem;
+                        padding-bottom: 3px;
+                        font-size: 1.5rem;
+                        text-wrap: normal;
+                        width: 50%;
+                    }
+
+                    small {
+                        position: relative;
+                        padding: 1rem;
+                        padding-top: 0px;
+                        font-size: 1rem;
+                        text-wrap: normal;
+                        font-weight: bold;
+                        color: gray;
+                        width: 50%;
+                        
+                    }
+                }
+
+                cardImg {
+                    position: absolute;
+                    top: 0;
+                    right: 0; 
+                    bottom: 0;
+                    width: 50%;
+                    background: url(../Image/su-san-lee-E_eWwM29wfU-unsplash.jpg);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    mask-image: linear-gradient(to right, transparent, #000 70%);
+                }
+            }
+
+        }
+
+        .contentTop {
+
+            .subTopText {
+                width: fit-content;
+                display:inline-block;
+                color: wheat;
+                font-weight:700;
+                margin-bottom: 0px;
+                white-space: nowrap;
+            }
+
+            .contentTopText {
+                color: white;
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+
+            hr {
+                margin: 0 auto; 
+                height: 1px;
+                margin-top: 0px;
+                margin-bottom: 10px;
+                background-color: #525252;
+                border: none;
+                width: 100%;
+            }
+
+            .topTextBox {
+                margin-top: 20px;
+                padding: 20px;
+                color: white;
+                background-color: #242424;
+                border-radius: 10px;
+
+                h2 {
+                    margin-bottom: 10px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: aqua;
+                }
+            }
+            
+        }
+
+        @media (max-width: 80rem) and  (min-width:60rem) {
+          
+            .animePilContent {
+
+                flex: 2 1 22rem;
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 2fr));
+                gap: 15px;
+                align-content:center;
+                padding: 40px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+                /* border-left: 3px solid rgb(116, 116, 116);  */
+                margin-bottom: 30px;
+            }
+        } 
+
+        @media (max-width: 100rem) and (min-width:80rem) {
+            
+            .animePilContent {
+
+                flex: 2 1 22rem;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 2fr));
+                gap: 15px;
+                align-content:center;
+                padding: 40px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+                /* border-left: 3px solid rgb(116, 116, 116);  */
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (min-width: 100rem) {
+            
+            .animePilContent {
+
+                flex: 2 1 22rem;
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 15px;
+                align-content:center;
+                padding: 40px;
+                padding-bottom: 30px;
+                padding-top: 20px;
+                /* border-left: 3px solid rgb(116, 116, 116);  */
+                margin-bottom: 30px;
+
+            }
+        }
+
+        @media (min-width: 60rem) {
+            .animePilContent {
+
+                    .card {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        overflow: hidden;
+                        min-height: 25rem;
+                        max-width: 100%;
+                        background-color: aliceblue;
+                        color: #222;
+                        border-radius: 8px;
+                        text-decoration: none;
+                    
+
+                        &:hover {
+                            border: 2px solid #f5e11a; 
+                        }
+
+                        h1{
+                            margin-top: auto;
+                            position: relative;
+                            padding: 1rem;
+                            padding-bottom: 3px;
+                            font-size: 1.5rem;
+                            text-wrap: normal;
+                            width: 100%;
+                        }
+
+                        small {
+                            position: relative;
+                            padding: 1rem;
+                            padding-top: 0px;
+                            font-size: 1rem;
+                            text-wrap: normal;
+                            font-weight: bold;
+                            color: gray;
+                            width: 100%;
+                            
+                        }
+                    }
+
+                    .cardImg {
+                        width: 100%;
+                        flex: 0 0 9rem;
+                        background: url(../Image/su-san-lee-E_eWwM29wfU-unsplash.jpg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        mask-image: linear-gradient(to top, transparent, #000 50%);
+                    }
+
+                }
+        }
